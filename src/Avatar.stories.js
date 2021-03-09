@@ -5,6 +5,10 @@ import { Avatar } from "./Avatar";
 export default {
   title: "Design System/Avatar",
   component: Avatar,
+  parameters: {
+    componentSubtitle:
+      "Displays an image that represnets a user or organization",
+  },
 };
 
 export const Standard = (args) => <Avatar {...args} />;
@@ -37,16 +41,16 @@ export const Initials = (args) => (
 );
 
 export const Loading = (args) => (
-    <div>
-      <Avatar {...args} size="large" />
-      <Avatar {...args} size="medium" />
-      <Avatar {...args} size="small" />
-      <Avatar {...args} size="tiny" />
-    </div>
-  );
-  Loading.args = {
-    loading: true,
-  };
+  <div>
+    <Avatar {...args} size="large" />
+    <Avatar {...args} size="medium" />
+    <Avatar {...args} size="small" />
+    <Avatar {...args} size="tiny" />
+  </div>
+);
+Loading.args = {
+  loading: true,
+};
 
 export const Large = (args) => (
   <div>
